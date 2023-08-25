@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header class=" bg-red-400 py-4 px-1 md:py-6">
+        <h1 class="text-center text-3xl font-bold md:text-4xl lg:text-5xl ">Area calculation Of Geometric Shape</h1>
+    </header>
+
+    <main>
+        <section class="max-w-screen-xl mx-auto px-2 flex flex-col-reverse gap-2 my-8  lg:flex-row md:justify-between">
+            <!-- shape-container -->
+            <div class="grid grid-cols-1 gap-6 gap-y-12 lg:gap-y-20 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Triangle Shape -->
+                <div class="card mx-auto w-80 bg-base-100 shadow-xl">
+                    <figure class="bg-gray-100 py-2"><img class="h-52" src="./images/triangle.png" alt="Shoes" /></figure>
+                    <div class="card-body pt-4 pb-0 px-0">
+                      <h1 class="text-lg font-medium text-center">Area: 0.5 x b x h</h1>
+
+                      <div class="flex justify-between w-full px-2">
+                        <div class="flex gap-1"><input id="triangle-base" type="text" class="border w-[60%] rounded-lg text-center py-1" placeholder="base"> <span class="font-medium text-lg">cm</span></div>
+                        <div class="flex gap-1"><input id="triangle-height" type="text" class="border w-[60%] rounded-lg text-center py-1" placeholder="height"> <span class="font-medium text-lg">cm</span></div>
+                      </div>
+
+                      <button id="triangle-btn" class="text-2xl font-semibold bg-slate-700 rounded-b-xl mt-2 py-2 text-white">Calculate Area</button>
+                    </div>
+                  </div>
+
+                  <!-- Rectangle Shape -->
+                  <div class="card mx-auto  w-80 bg-base-100 shadow-xl">
+                    <figure class="bg-gray-100 py-2"><img class="h-52 w-72" src="./images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body pt-4 pb-0 px-0">
+                      <h1 class="text-lg font-medium text-center">Area: l x w</h1>
+
+                      <div class="flex justify-between w-full px-2">
+                        <div class="flex gap-1"><input id="rectangle-length" type="text" class="border w-[60%] rounded-lg text-center py-1" placeholder="Length"> <span class="font-medium text-lg">cm</span></div>
+                        <div class="flex gap-1"><input id="rectangle-width" type="text" class="border w-[60%] rounded-lg text-center py-1" placeholder="width"> <span class="font-medium text-lg">cm</span></div>
+                      </div>
+
+                      <button id="rectangle-btn" class="text-2xl font-semibold bg-slate-700 rounded-b-xl mt-2 py-2 text-white">Calculate Area</button>
+                    </div>
+                  </div>
+
+                  <!-- pentagon Shape -->
+                  <div class="card mx-auto  w-80 bg-base-100 shadow-xl">
+                    <figure class="bg-gray-100 py-2"><img class="h-52" src="./images/pentagon.png" alt="Shoes" /></figure>
+                    <div class="card-body pt-4 pb-0 px-0">
+                      <h1 class="text-lg font-medium text-center">Area: 0.5 x P x b</h1>
+
+                      <div class="flex justify-between w-full px-2">
+                        <div class="flex gap-1"><input type="text" id="p-value" class="border w-[60%] rounded-lg text-center py-1" placeholder="P-value"> <span class="font-medium text-lg">cm</span></div>
+                        <div class="flex gap-1"><input type="text" id="b-value" class="border w-[60%] rounded-lg text-center py-1" placeholder="B-value"> <span class="font-medium text-lg">cm</span></div>
+                      </div>
+
+                      <button id="pentagon-btn" class="text-2xl font-semibold bg-slate-700 rounded-b-xl mt-2 py-2 text-white">Calculate Area</button>
+                    </div>
+                  </div>
+
+                  <!-- Ellips Shape -->
+                  <div class="card mx-auto  w-80 bg-base-100 shadow-xl">
+                    <figure class="bg-gray-100 py-2"><img class="h-52" src="./images/ellipse.png" alt="Shoes" /></figure>
+                    <div class="card-body pt-4 pb-0 px-0">
+                      <h1 class="text-lg font-medium text-center">Area: 3.1416 x a x b</h1>
+
+                      <div class="flex justify-between w-full px-2">
+                        <div class="flex gap-1"><input id="a-axis" type="text" class="border w-[60%] rounded-lg text-center py-1" placeholder="a-axis"> <span class="font-medium text-lg">cm</span></div>
+                        <div class="flex gap-1"><input id="b-axis" type="text" class="border w-[60%] rounded-lg text-center py-1" placeholder="b-axis"> <span class="font-medium text-lg">cm</span></div>
+                      </div>
+
+                      <button id="ellipse-btn" class="text-2xl font-semibold bg-slate-700 rounded-b-xl mt-2 py-2 text-white">Calculate Area</button>
+                    </div>
+                  </div>
+
+                  <!-- rombosh Shape -->
+                  <div class="card mx-auto  w-80 bg-base-100 shadow-xl">
+                    <figure class="bg-gray-100 py-2"><img class="h-52" src="./images/rhombus.png" alt="Shoes" /></figure>
+                    <div class="card-body pt-4 pb-0 px-0">
+                      <h1 class="text-lg font-medium text-center">Area: 0.5 x d<sub>1</sub> x d<sub>2</sub></h1>
+
+                      <div class="flex justify-between w-full px-2">
+                        <div class="flex gap-1"><input id="first-d" type="text" class="border w-[60%] rounded-lg text-center py-1" placeholder="first-d"> <span class="font-medium text-lg">cm</span></div>
+                        <div class="flex gap-1"><input id="second-d" type="text" class="border w-[60%] rounded-lg text-center py-1" placeholder="second-d"> <span class="font-medium text-lg">cm</span></div>
+                      </div>
+
+                      <button id="rhombus-btn" class="text-2xl font-semibold bg-slate-700 rounded-b-xl mt-2 py-2 text-white">Calculate Area</button>
+                    </div>
+                  </div>
+
+                  <!-- parallelogram Shape -->
+                  <div class="card mx-auto  w-80 bg-base-100 shadow-xl">
+                    <figure class="bg-gray-100 py-2"><img class="h-52" src="./images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body pt-4 pb-0 px-0">
+                      <h1 class="text-lg font-medium text-center">Area: b x h</h1>
+
+                      <div class="flex justify-between w-full px-2">
+                        <div class="flex gap-1"><input id="p-base" type="text" class="border w-[60%] rounded-lg text-center py-1" placeholder="base"> <span class="font-medium text-lg">cm</span></div>
+                        <div class="flex gap-1"><input id="p-height" type="text" class="border w-[60%] rounded-lg text-center py-1" placeholder="height"> <span class="font-medium text-lg">cm</span></div>
+                      </div>
+
+                      <button id="parallelogram-btn" class="text-2xl font-semibold bg-slate-700 rounded-b-xl mt-2 py-2 text-white">Calculate Area</button>
+                    </div>
+                  </div>
+            </div>
+        
+            <!-- Calculation Part -->
+            <div class="border border-slate-600 px-2 py-8 h-40 lg:w-52 sticky top-0 bg-teal-600">
+                <h1 id="result-title" class="text-2xl text-center font-bold hidden">Area of <span id="shape-name"></span> is: </h1>
+                <h1 id="result" class="text-2xl text-center font-bold"></h1>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./js/javascript.js"></script>
+</body>
+</html>
