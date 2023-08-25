@@ -5,7 +5,7 @@ function setResult(area, shapeName) {
     }
     else {
         document.getElementById('shape-name').innerText = shapeName;
-        document.getElementById('result').innerText = area;
+        document.getElementById('result').innerText = area.toFixed(2);
         document.getElementById('result-title').classList.remove("hidden");
     }
 }
